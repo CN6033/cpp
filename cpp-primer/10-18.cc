@@ -6,19 +6,19 @@
 
 namespace CppPrimer
 {
-    using namespace std;
+using namespace std;
 
-    int find_names(const string &firstname, 
-            const map<string, vector<string> > &family_map, 
-            const vector<string> *names){
-        map<string, vector<string> >::const_iterator _it = family_map.find(firstname);
-        if(_it != family_map.end()){
-            names = &(_it->second);
-            return 1;
-        }else{
-            return 0;
-        }
+int find_names(const string &firstname, 
+        const map<string, vector<string> > &family_map, 
+        const vector<string> *names){
+    map<string, vector<string> >::const_iterator _it = family_map.find(firstname);
+    if(_it != family_map.end()){
+        names = &(_it->second);
+        return 1;
+    }else{
+        return 0;
     }
+}
 }
 
 
