@@ -8,7 +8,8 @@ namespace CppPrimer
 {
 class ReadBook{
 public:
-    explicit ReadBook(){}
+    //Use the C++ keyword explicit for constructors with one argument.
+    ReadBook(){}
 
     virtual ~ReadBook(){}
 
@@ -59,15 +60,14 @@ private:
 
 
 int main(int argc, char **argv){
-    CppPrimer::ReadBook *p_read_book = new CppPrimer::ReadBook();
-    p_read_book->AddToReadBook("C++ Primer");
-    p_read_book->AddToReadBook("Effective C++");
-    p_read_book->AddToReadBook("More Effective C++");
-    p_read_book->AddReadedBook("Head first Python");
-    p_read_book->Output();
-    p_read_book->AddReadedBook(p_read_book->RemoveToReadBook("C++ Primer"));
-    p_read_book->Output();
-    p_read_book->AddToReadBook(p_read_book->RemoveReadedBook("C++ Primer"));
-    p_read_book->Output();
-    delete p_read_book;
+    CppPrimer::ReadBook read_book;
+    read_book.AddToReadBook("C++ Primer");
+    read_book.AddToReadBook("Effective C++");
+    read_book.AddToReadBook("More Effective C++");
+    read_book.AddReadedBook("Head first Python");
+    read_book.Output();
+    read_book.AddReadedBook(read_book.RemoveToReadBook("C++ Primer"));
+    read_book.Output();
+    read_book.AddToReadBook(read_book.RemoveReadedBook("C++ Primer"));
+    read_book.Output();
 }
