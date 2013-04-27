@@ -69,4 +69,5 @@ int main(int argc, char **argv){
     p_read_book->Output();
     p_read_book->AddToReadBook(p_read_book->RemoveReadedBook("C++ Primer"));
     p_read_book->Output();
+    delete p_read_book;
 }
