@@ -1,8 +1,6 @@
 #include<iostream>
 #include<cstring>
 
-using namespace std;
-
 typedef int (*CFT) (const void*, const void*);
 
 /*
@@ -44,6 +42,7 @@ User heads[] = {
 };
 
 void PrintId(User *v, int n){
+    using std::cout;
     for(int i=0; i<n; i++){
         cout << v[i].name << '\t' << v[i].id << '\t' << v[i].dept << '\n';
     }
@@ -58,6 +57,7 @@ int CmpDept(const void *p, const void *q){
 }
 
 int main(){
+    using namespace std;
     cout << "Heads in alphabetical order:\n";
     SSort(heads, 4, sizeof(User), CmpName);
     PrintId(heads, 4);
