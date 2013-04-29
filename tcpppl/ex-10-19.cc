@@ -13,9 +13,10 @@ using std::cin;
 using std::istream;
 using std::istringstream;
 
-namespace TCPPPL{
+namespace TCPPPL
+{
 
-int func(const vector<string> words, istream &input, map<string, vector<int> > &word_lines_map)
+int GetWordLines(const vector<string> words, istream &input, map<string, vector<int> > &word_lines_map)
 {
     int line_num = 1;
     string line, word;
@@ -30,10 +31,11 @@ int func(const vector<string> words, istream &input, map<string, vector<int> > &
         }
         line_num++;
     }
+    return 0;
 }
 }
 
-int main()
+int main(int argc, char **argv)
 {
     vector<string> words;
     words.push_back("hello");
@@ -41,5 +43,5 @@ int main()
     words.push_back("world");
     map<string, vector<int> > word_lines_map;
 
-    TCPPPL::func(words, cin, word_lines_map);
+    TCPPPL::GetWordLines(words, cin, word_lines_map);
 }
