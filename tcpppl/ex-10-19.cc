@@ -16,7 +16,7 @@ using std::istringstream;
 namespace TCPPPL
 {
 
-int GetWordLines(const vector<string> words, istream &input, map<string, vector<int> > &word_lines_map)
+int StatsWordLines(const vector<string> words, istream &input, map<string, vector<int> > &word_lines_map)
 {
     int line_num = 1;
     string line, word;
