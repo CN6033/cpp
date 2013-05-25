@@ -10,7 +10,8 @@ using namespace std;
 
 int find_names(const string &firstname, 
         const map<string, vector<string> > &family_map, 
-        const vector<string> *names){
+        const vector<string> *names)
+{
     map<string, vector<string> >::const_iterator _it = family_map.find(firstname);
     if(_it != family_map.end()){
         names = &(_it->second);
